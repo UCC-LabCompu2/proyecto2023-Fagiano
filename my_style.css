@@ -3,7 +3,11 @@ body{
             ellipse farthest-corner at top left,
             #C9FBFF,
             #6495ed);
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+
 }
 .title h1{
     text-align: center;
