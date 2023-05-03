@@ -1,8 +1,7 @@
 body {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    grid-template-columns:repeat(3, 1fr);
-    min-height: 1vh;
+    grid-template-columns:repeat(3, 3fr);
     background: radial-gradient(
             ellipse farthest-corner at top left,
             #C9FBFF,
@@ -22,6 +21,7 @@ h3{
     text-align: center;
     margin: 0.1em 0;
     text-shadow: 10px 10px 10px #55737A;
+    height: fit-content;
 }
 .singin,.login{
     display: flex;
@@ -54,11 +54,6 @@ h3{
     padding: 5px;
 }
 
-.info {
-    margin: 0 0 1em 0;
-
-}
-
 .user-info{
     border: 0.2em solid ;
     border-radius: 10px;
@@ -69,8 +64,9 @@ h3{
 /*calendario*/
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 80%;
     text-align: center;
+    background: darkgrey;
 }
 th, td {
     text-align: center;
@@ -94,8 +90,8 @@ td:hover {
     grid-row: 2;
     grid-column: 2;
 
-
 }
+
 .calendar{
     text-align: center;
     grid-column: 2 / span 3;
@@ -117,16 +113,19 @@ a[href="page2.html"]{
     border-radius: 10px;
     background: #85BDBF;
     width: 25%;
+    height: fit-content;
 }
 
 a[href="page2.html"]:hover{
     width: 30%;
 }
 
-footer {
+.info-box{
     grid-row: 2;
     grid-column: 3;
     padding: 1em;
-    text-align: center;
-    flex-direction: row;
+    text-align: left;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
 }
