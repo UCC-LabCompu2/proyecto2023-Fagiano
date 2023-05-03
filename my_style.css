@@ -108,7 +108,7 @@ td:hover {
     width: fit-content;
     height: fit-content;
 }
-a[href="PAGE2.html"]{
+a[href="page2.html"]{
     border: 1px solid #000000;
     grid-row: 3;
     grid-column: 2;
@@ -119,7 +119,7 @@ a[href="PAGE2.html"]{
     width: 25%;
 }
 
-a[href="PAGE2.html"]:hover{
+a[href="page2.html"]:hover{
     width: 30%;
 }
 
