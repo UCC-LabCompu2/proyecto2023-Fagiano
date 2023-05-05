@@ -65,8 +65,8 @@ h3{
 .user-info{
     border: 0.2em solid ;
     border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
+    padding: 0.001em;
+    margin: 5em 2em ;
 }
 
 /*calendario*/
