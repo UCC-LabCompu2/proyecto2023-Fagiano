@@ -8,6 +8,8 @@ body {
             #6495ed) no-repeat fixed;
     height: 100%;
     margin: 0;
+    /*font-family: 'Chivo Mono', monospace;*/
+    font-family: 'Lato', sans-serif;
 }
 /*style*/
 h3{
@@ -15,13 +17,19 @@ h3{
     border-bottom: 0.10em solid #000000;
     padding-bottom: 0.10em;
 }
-.title {
+.title h1,
+.title image {
+    display: inline-block;
+    vertical-align: center;
+}
+.title{
+    height: fit-content;
     grid-row: 1;
     grid-column: 2;
     text-align: center;
-    margin: 0.1em 0;
+    margin: 0.1em 0.1em;
     text-shadow: 10px 10px 10px #55737A;
-    height: fit-content;
+    padding: 1em;
 }
 .singin,.login{
     display: flex;
@@ -85,11 +93,11 @@ td:hover {
 .singin{
     grid-row: 2;
     grid-column: 1;
+    margin-left: 7em;
 }
 .login {
     grid-row: 2;
     grid-column: 2;
-
 }
 
 .calendar{
@@ -119,6 +127,21 @@ a[href="page2.html"]{
 a[href="page2.html"]:hover{
     width: 30%;
 }
+a[href="index.html"]{
+    border: 1px solid #000000;
+    grid-row: 3;
+    grid-column: 2;
+    text-align: center;
+    margin: 1em 0;
+    border-radius: 10px;
+    background: #85BDBF;
+    width: 25%;
+    height: fit-content;
+}
+
+a[href="index.html"]:hover{
+    width: 30%;
+}
 
 .info-box{
     grid-row: 2;
@@ -128,4 +151,13 @@ a[href="page2.html"]:hover{
     flex-direction: column;
     height: fit-content;
     width: fit-content;
+}
+#page_logo{
+    width: 5em;
+    height: 5em;
+    margin-right: 1em;
+}
+#busy_days{
+    width: 10em;
+    height: 8em;
 }

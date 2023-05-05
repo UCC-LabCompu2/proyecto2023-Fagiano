@@ -5,6 +5,10 @@ Estructura de Proyecto Lab de Compu II - 2023
 ### Autor Marcos Fagaino
 ### [Turnero](https://ucc-labcompu2.github.io/proyecto2023-Fagiano/)
 ### En la pagina se puede encontrar un programa que permite, tras registrase, sacar un turno y ver la disponibilidad
+### Tecnologias empleadas:
+- HTML
+- CSS 
+- JavaScript
 
 ## Requisitos del Primer Parcial
 
