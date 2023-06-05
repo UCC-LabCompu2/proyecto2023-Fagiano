@@ -85,9 +85,10 @@ th {
     background-color: gray;
     color: white;
 }
-td:hover {
+td.valid_celd:hover {
     background-color: lightgray;
 }
+
 
 /*posiciones del grid*/
 .singin{

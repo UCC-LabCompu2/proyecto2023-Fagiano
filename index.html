@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=Lato:ital@1&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="my_function.js"></script>
+
 </head>
 <body>
 <header class="title">
@@ -68,10 +70,10 @@
     </p>
     <p>
         <label for="retype_password">Contraseña:</label>
-        <input type="password" name="psw_check" placeholder="Repita la contraseña" id="retype_password">
+        <input type="password" name="psw2" placeholder="Repita la contraseña" id="retype_password">
     </p>
     <p>
-        <button type="submit" name="sumbit">Registrarse</button>
+        <button type="submit" name="submit_sing_in" id="sing_in_button">Registrarse</button>
     </p>
 </section>
 <section class="login">
@@ -92,7 +94,7 @@
 
     </p>
     <p>
-        <button type="submit" name="sumbit">Ingresar</button>
+        <button type="submit" name="sumbit_log_in" onclick="log_in()">Ingresar</button>
     </p>
 </section>
 <aside class="info-box">
