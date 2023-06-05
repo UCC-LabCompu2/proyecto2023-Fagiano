@@ -19,13 +19,13 @@
     <table>
         <caption><h1>May 2023</h1></caption>
         <tr>
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
+            <th>Domingo</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sabado</th>
         </tr>
         <tr>
             <td></td>
@@ -33,47 +33,47 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="valid_celd">1</td>
-            <td class="valid_celd">2</td>
+            <td class="valid_celd" onclick="get_date(this)">1</td>
+            <td class="valid_celd" onclick="get_date(this)">2</td>
         </tr>
         <tr>
-            <td class="valid_celd">3</td>
-            <td class="valid_celd">4</td>
-            <td class="valid_celd">5</td>
-            <td class="valid_celd">6</td>
-            <td class="valid_celd">7</td>
-            <td class="valid_celd">8</td>
-            <td class="valid_celd">9</td>
+            <td class="valid_celd" onclick="get_date(this)">3</td>
+            <td class="valid_celd" onclick="get_date(this)">4</td>
+            <td class="valid_celd" onclick="get_date(this)">5</td>
+            <td class="valid_celd" onclick="get_date(this)">6</td>
+            <td class="valid_celd" onclick="get_date(this)">7</td>
+            <td class="valid_celd" onclick="get_date(this)">8</td>
+            <td class="valid_celd" onclick="get_date(this)">9</td>
         </tr>
         <tr>
-            <td class="valid_celd">10</td>
-            <td class="valid_celd">11</td>
-            <td class="valid_celd">12</td>
-            <td class="valid_celd">13</td>
-            <td class="valid_celd">14</td>
-            <td class="valid_celd">15</td>
-            <td class="valid_celd">16</td>
+            <td class="valid_celd" onclick="get_date(this)">10</td>
+            <td class="valid_celd" onclick="get_date(this)">11</td>
+            <td class="valid_celd" onclick="get_date(this)">12</td>
+            <td class="valid_celd" onclick="get_date(this)">13</td>
+            <td class="valid_celd" onclick="get_date(this)">14</td>
+            <td class="valid_celd" onclick="get_date(this)">15</td>
+            <td class="valid_celd" onclick="get_date(this)">16</td>
         </tr>
         <tr>
-            <td class="valid_celd">17</td>
-            <td class="valid_celd">18</td>
-            <td class="valid_celd">19</td>
-            <td class="valid_celd">20</td>
-            <td class="valid_celd">21</td>
-            <td class="valid_celd">22</td>
-            <td class="valid_celd">23</td>
+            <td class="valid_celd" onclick="get_date(this)">17</td>
+            <td class="valid_celd" onclick="get_date(this)">18</td>
+            <td class="valid_celd" onclick="get_date(this)">19</td>
+            <td class="valid_celd" onclick="get_date(this)">20</td>
+            <td class="valid_celd" onclick="get_date(this)">21</td>
+            <td class="valid_celd" onclick="get_date(this)">22</td>
+            <td class="valid_celd" onclick="get_date(this)">23</td>
         </tr>
         <tr>
-            <td class="valid_celd">24</td>
-            <td class="valid_celd">25</td>
-            <td class="valid_celd">26</td>
-            <td class="valid_celd">27</td>
-            <td class="valid_celd">28</td>
-            <td class="valid_celd">29</td>
-            <td class="valid_celd">30</td>
+            <td class="valid_celd" onclick="get_date(this)">24</td>
+            <td class="valid_celd" onclick="get_date(this)">25</td>
+            <td class="valid_celd" onclick="get_date(this)">26</td>
+            <td class="valid_celd" onclick="get_date(this)">27</td>
+            <td class="valid_celd" onclick="get_date(this)">28</td>
+            <td class="valid_celd" onclick="get_date(this)">29</td>
+            <td class="valid_celd" onclick="get_date(this)">30</td>
         </tr>
         <tr>
-            <td class="valid_celd">31</td>
+            <td class="valid_celd" onclick="get_date(this)">31</td>
             <td></td>
             <td></td>
             <td></td>
@@ -86,24 +86,21 @@
 
 <div class="user-info">
     <h4>Datos del paciente:</h4>
-    <p id="user">
-        Usuario:
-    </p>
-    <p id="name">
-        Nombre:
-    </p>
-    <p id="last_name">
-        Apellido:
-    </p>
-    <p id="age">
-        Edad:
-    </p>
-    <canvas id="busy_days">
+    <p id="user_info"></p>
+    <p id="name_info"></p>
+    <p id="last_name_info"></p>
+    <p id="age_info"></p>
+</div>
+<div class="canvas_div">
+    <p>Horarios concurridos:</p>
+    <canvas id="busy_days" width="400" height="300">
 
     </canvas>
+    <button type="submit" onclick="save_date()">Guardar turno</button>
 </div>
 
-<a href="index.html">Back</a>
+<a id="back" href="index.html">Back</a>
+
 
 
 </body>

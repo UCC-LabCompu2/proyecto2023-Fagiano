@@ -1,0 +1,24 @@
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo para personalizar la apariencia del label y la fecha */
+.date-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.date {
+    display: block;
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+/* Estilo para resaltar la fecha seleccionada */
+input[type="radio"]:checked + .date-label .date {
+    background-color: yellow;
+}

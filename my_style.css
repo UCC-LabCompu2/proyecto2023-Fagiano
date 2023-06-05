@@ -58,14 +58,14 @@ h3{
     border: 2px solid #000000;
     border-radius: 10px;
     float: left;
-    margin: 10px;
-    padding: 5px;
+    margin: 15px;
+    padding: 10px;
 }
 
 .user-info{
     border: 0.2em solid ;
     border-radius: 10px;
-    padding: 0.001em;
+    padding: 0.7em;
     margin: 5em 2em ;
 }
 
@@ -103,7 +103,7 @@ td.valid_celd:hover {
 
 .calendar{
     text-align: center;
-    grid-column: 2 / span 3;
+    grid-column: 2 ;
     grid-row: 1;
 }
 .user-info{
@@ -144,6 +144,19 @@ a[href="index.html"]:hover{
     width: 30%;
 }
 
+.canvas_div{
+    text-align: center;
+    grid-column: 3;
+    grid-row: 1;
+    width: fit-content;
+    height: fit-content;
+    border: 0.2em solid ;
+    border-radius: 10px;
+    padding: 0.7em;
+    margin: 5em 2em ;
+    background-color: slategrey;
+}
+
 .info-box{
     grid-row: 2;
     grid-column: 3;
@@ -161,4 +174,7 @@ a[href="index.html"]:hover{
 #busy_days{
     width: 10em;
     height: 8em;
+}
+.marked {
+    background-color: yellow;
 }
