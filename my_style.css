@@ -177,4 +177,5 @@ a[href="index.html"]:hover{
 }
 .marked {
     background-color: yellow;
+    border-radius: 20em 20em;
 }

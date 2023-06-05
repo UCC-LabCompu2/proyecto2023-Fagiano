@@ -1,6 +1,3 @@
-//**
-//*
-//**
 
 
 function sing_in(){
@@ -8,15 +5,14 @@ function sing_in(){
     name=document.getElementById("name").value;
     last_name=document.getElementById("last_name").value;
     dni=document.getElementById("dni").value;
-    gender=document.querySelector('input[name="gender"]:checked').value;
     age=document.getElementById("age").value;
     email=document.getElementById("email").value;
     user=document.getElementById("user").value;
     password=document.getElementById("password").value;
     password_conf=document.getElementById("retype_password").value;
-
-    if (name === "" || last_name === "" || dni === "" || gender === "" || age === "" || email === "" || user === "" || password === "" || password_conf === "") {
-        alert("Por favor, complete todos los campos.");
+    gender = document.querySelector('input[name="gender"]:checked');
+    if (name === "" || last_name === "" || dni === "" || gender===null|| age === "" || email === "" || user === "" || password === "" || password_conf === "") {
+        alert("Por favor, complete todos los campos")
     } else if (password !== password_conf) {
         alert("Las contraseñas no coinciden.");
     } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -28,6 +24,7 @@ function sing_in(){
         localStorage.setItem("user", user);
         window.open("page2.html", "_self");
     }
+
 }
 
 function log_in(){
@@ -56,7 +53,7 @@ function set_patient() {
     age = localStorage.getItem("age");
     user = localStorage.getItem("user");
 
-    document.getElementById("user_info").textContent = "Ususario: " + user;
+    document.getElementById("user_info").textContent = "Usuario: " + user;
     document.getElementById("name_info").textContent = "Nombre: " + name;
     document.getElementById("last_name_info").textContent = "Apellido: " + last_name;
     document.getElementById("age_info").textContent = "Edad: " + age;
@@ -65,27 +62,33 @@ function set_patient() {
 
 function draw_canvas() {
 
-    let canvas = document.getElementById("busy_days");
-    let ctx = canvas.getContext("2d");
-    ctx.clearRect(0,0,canvas.width, canvas.height);
+    const canvas = document.getElementById("busy_days");
+    const context = canvas.getContext("2d");
+    context.clearRect(0,0,canvas.width, canvas.height);
 
-    let horasAsistidas = [];
+    const hours = ["8", "9", "10", "11", "12", "13", "14", "15"];
+    let data = [];
     for (let i = 0; i < 8; i++) {
-        horasAsistidas[i] = Math.random() * 10;
+        data[i] = Math.random() * 10;
     }
+    const chartWidth = canvas.width - 100;
+    const chartHeight = canvas.height - 100;
+    const barWidth = chartWidth / hours.length;
+    const maxDataValue = Math.max(...data);
+    const scale = chartHeight / maxDataValue;
+    const barSpacing = 10;
 
-    let barWidth = 50;
-    let chartHeight = canvas.height - 30;
-    let barSpacing = 10;
-    let maxDataValue = Math.max(...horasAsistidas);
+    for (let i = 0; i < hours.length; i++) {
+        const x = i * (barWidth + barSpacing) + 50;
+        const barHeight = data[i] * scale;
+        const y = canvas.height - barHeight - 80;
 
-    for (let i = 0; i < horasAsistidas.length; i++) {
-        let barHeight = (horasAsistidas[i] / maxDataValue) * chartHeight;
-        let x = i * (barWidth + barSpacing);
-        let y = canvas.height - barHeight;
+        context.fillStyle = "blue";
+        context.fillRect(x, y, barWidth, barHeight);
 
-        ctx.fillStyle = "blue";
-        ctx.fillRect(x, y, barWidth, barHeight);
+        context.fillStyle = "black";
+        context.font = "5em Arial";
+        context.fillText(hours[i], x, canvas.height -5);
     }
 }
 
@@ -104,6 +107,7 @@ function get_date(date){
 function save_date(){
     if(selected_date!==null){
         alert('Turno guardado.');
+        window.open("index.html", "_self");
     }else{
         alert('Debe seleccionar un turno.')
     }
