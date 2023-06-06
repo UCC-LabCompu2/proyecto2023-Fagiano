@@ -2,10 +2,10 @@
 Estructura de Proyecto Lab de Compu II - 2023
 
 # Turnero
-### Autor Marcos Fagaino
+### Autor Marcos Fagiano
 ### [Turnero](https://ucc-labcompu2.github.io/proyecto2023-Fagiano/)
-### En la pagina se puede encontrar un programa que permite, tras registrase, sacar un turno y ver la disponibilidad
-### Tecnologias empleadas:
+### En la página se puede encontrar un programa que, tras registrarse, permite sacar un turno y verificar la disponibilidad.
+Tecnologías empleadas:
 - HTML
 - CSS 
 - JavaScript
@@ -16,14 +16,14 @@ Estructura de Proyecto Lab de Compu II - 2023
 - [x] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
 - [x] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ ] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
-- [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
+- [x] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [x] Publicar la Web empleando GitHubPages
 - [x] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
 
 ### Sobre el Proyecto General
 - [x] La página principal debe llamarse index
 - [x] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [x] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [x] Se debe emplear algún favicon
 - [x] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [x] Debe haber navegación entre todas las páginas
@@ -65,17 +65,17 @@ Estructura de Proyecto Lab de Compu II - 2023
 ## Requisitos del Segundo Parcial
 
 ### Sobre el proyecto general
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer parcial deben estar corregidas.
-- [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScripts presentes. (ver con F12 si hay errores)
+- [x] Todas las correcciones y mejoras solicitadas durante el primer parcial deben estar corregidas.
+- [x] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
+- [x] No debe haber errores JavaScripts presentes. (ver con F12 si hay errores)
 
 ### Sobre la funcionalidad JavaScript
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
-- [ ] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert, y que blanquee el contenido del campo.
-- [ ] Una función que calcule algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
-- [ ] El código Js debe estar en un archivo externo
-- [ ] Se debe emplear var, let o const según corresponda para mayor eficiencia
+- [x] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert, y que blanquee el contenido del campo.
+- [x] Una función que calcule algo en base a los valores ingresados por el usuario en los inputs.
+- [x] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
+- [x] El código Js debe estar en un archivo externo
+- [x] Se debe emplear var, let o const según corresponda para mayor eficiencia
 
 ### Sobre la documentación
 - [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
