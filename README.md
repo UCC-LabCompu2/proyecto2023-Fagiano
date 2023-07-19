@@ -78,7 +78,7 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [x] Se debe emplear var, let o const según corresponda para mayor eficiencia
 
 ### Sobre la documentación
-- [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
+- [x] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
    ```/**
      * Descripción de que hace la función
      * @method Nombre de la función
