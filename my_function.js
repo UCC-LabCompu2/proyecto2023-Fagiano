@@ -101,27 +101,57 @@ function set_patient() {
     document.getElementById("age_info").textContent = "Edad: " + age;
 
 }
+// function draw_canvas() {
+//     /**
+//      * dibuja en el canvas bussy_day los horarios mas concurridos;
+//      * @method draw_canvas()
+//      * @param {string} hours - etiqueta para las horas
+//      * @param {string} canvas - alamacena el elemento
+//      * @param {string} context - almacena el contexto del canvas
+//      * @param {number} data - array de horarios mas concurridos generados aleatoriamente
+//      * @param {number} chartWidth - ancho del canvas
+//      * @param {number} chartHeight - alto del canvas
+//      * @param {number} barWidth - ancho de la barra, dividiendo el ancho del canvas por la cantidad de horas a representar
+//      * @param {number} maxDataValue - calcula el valor maximo de los datos a dibujar para calcular la escala
+//      * @param {number} scale - calcula la escala de las barras
+//      * @param {number} barSpacing - constante para separacion entre barras
+//      * @param {number} x - ancho de la barra
+//      * @param {number} y - alto de la barra
+//      */
+//
+//     const canvas = document.getElementById("busy_days");
+//     const context = canvas.getContext("2d");
+//     context.clearRect(0,0,canvas.width, canvas.height);
+//
+//     const hours = ["8", "9", "10", "11", "12", "13", "14", "15"];
+//     let data = [];
+//     for (let i = 0; i < 8; i++) {
+//         data[i] = Math.random() * 10;
+//     }
+//     const chartWidth = canvas.width - 100;
+//     const chartHeight = canvas.height - 100;
+//     const barWidth = chartWidth / hours.length;
+//     const maxDataValue = Math.max(...data);
+//     const scale = chartHeight / maxDataValue;
+//     const barSpacing = 10;
+//
+//     for (let i = 0; i < hours.length; i++) {
+//         const x = i * (barWidth + barSpacing) + 50;
+//         const barHeight = data[i] * scale;
+//         const y = canvas.height - barHeight - 80;
+//
+//         context.fillStyle = "blue";
+//         context.fillRect(x, y, barWidth, barHeight);
+//
+//         context.fillStyle = "black";
+//         context.font = "5em Arial";
+//         context.fillText(hours[i], x, canvas.height -5);
+//     }
+// }
 function draw_canvas() {
-    /**
-     * dibuja en el canvas bussy_day los horarios mas concurridos;
-     * @method draw_canvas()
-     * @param {string} hours - etiqueta para las horas
-     * @param {string} canvas - alamacena el elemento
-     * @param {string} context - almacena el contexto del canvas
-     * @param {number} data - array de horarios mas concurridos generados aleatoriamente
-     * @param {number} chartWidth - ancho del canvas
-     * @param {number} chartHeight - alto del canvas
-     * @param {number} barWidth - ancho de la barra, dividiendo el ancho del canvas por la cantidad de horas a representar
-     * @param {number} maxDataValue - calcula el valor maximo de los datos a dibujar para calcular la escala
-     * @param {number} scale - calcula la escala de las barras
-     * @param {number} barSpacing - constante para separacion entre barras
-     * @param {number} x - ancho de la barra
-     * @param {number} y - alto de la barra
-     */
-
     const canvas = document.getElementById("busy_days");
     const context = canvas.getContext("2d");
-    context.clearRect(0,0,canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
     const hours = ["8", "9", "10", "11", "12", "13", "14", "15"];
     let data = [];
@@ -138,16 +168,29 @@ function draw_canvas() {
     for (let i = 0; i < hours.length; i++) {
         const x = i * (barWidth + barSpacing) + 50;
         const barHeight = data[i] * scale;
-        const y = canvas.height - barHeight - 80;
+        const y = canvas.height - 80;
 
-        context.fillStyle = "blue";
-        context.fillRect(x, y, barWidth, barHeight);
+        let animationHeight = 0;
+        let animationInterval = setInterval(() => {
+            context.clearRect(x, y - animationHeight, barWidth, animationHeight);
+            context.fillStyle = "blue";
+            context.fillRect(x, y - animationHeight, barWidth, animationHeight);
 
-        context.fillStyle = "black";
-        context.font = "5em Arial";
-        context.fillText(hours[i], x, canvas.height -5);
+            animationHeight += barHeight / 20;
+
+            if (animationHeight >= barHeight) {
+                clearInterval(animationInterval);
+                context.fillStyle = "blue";
+                context.fillRect(x, y - barHeight, barWidth, barHeight);
+
+                context.fillStyle = "black";
+                context.font = "5em Arial";
+                context.fillText(hours[i], x, canvas.height - 5);
+            }
+        }, 30);
     }
 }
+
 let selected_date=null;
 function get_date(date){
     /**
@@ -163,6 +206,7 @@ function get_date(date){
     selected_date.classList.add("marked");
 
     draw_canvas();
+
 }
 
 
