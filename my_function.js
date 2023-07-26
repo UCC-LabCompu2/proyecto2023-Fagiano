@@ -84,43 +84,11 @@ function set_patient() {
     document.getElementById("age_info").textContent = "Edad: " + age;
 
 }
-// function draw_canvas() {
-//     /**
-//
-//
-//     const canvas = document.getElementById("busy_days");
-//     const context = canvas.getContext("2d");
-//     context.clearRect(0,0,canvas.width, canvas.height);
-//
-//     const hours = ["8", "9", "10", "11", "12", "13", "14", "15"];
-//     let data = [];
-//     for (let i = 0; i < 8; i++) {
-//         data[i] = Math.random() * 10;
-//     }
-//     const chartWidth = canvas.width - 100;
-//     const chartHeight = canvas.height - 100;
-//     const barWidth = chartWidth / hours.length;
-//     const maxDataValue = Math.max(...data);
-//     const scale = chartHeight / maxDataValue;
-//     const barSpacing = 10;
-//
-//     for (let i = 0; i < hours.length; i++) {
-//         const x = i * (barWidth + barSpacing) + 50;
-//         const barHeight = data[i] * scale;
-//         const y = canvas.height - barHeight - 80;
-//
-//         context.fillStyle = "blue";
-//         context.fillRect(x, y, barWidth, barHeight);
-//
-//         context.fillStyle = "black";
-//         context.font = "5em Arial";
-//         context.fillText(hours[i], x, canvas.height -5);
-//     }
-// }
-/** dibuja en el canvas bussy_day los horarios mas concurridos;
-//      * @method draw_canvas()
-//      */
+
 function draw_canvas() {
+    /** dibuja en el canvas bussy_day los horarios mas concurridos;
+     //      * @method draw_canvas()
+     //      */
     const canvas = document.getElementById("busy_days");
     const context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
