@@ -2,16 +2,6 @@ function sing_in(){
     /**
      * entrada de datos del paciente en el campo de sing in y almacenamiendo de name, last name, user y edad;
      * @method sing_in()
-     * @param {string} name - Nombre del paciente
-     * @param {string} last_name - Apellido del paciente
-     * @param {string} password - contraseña
-     * @param {string} password_conf - confirmacion de la constaseña
-     * @param {number} dni - dni del paciente
-     * @param {string} gender - genero del paciente
-     * @param {number} age - edad del paciente
-     * @param {string} email - email
-     * @param {string} user - usuario
-     * @param {string} regex - regular expresion para validacion de nombre y apellido
      */
     let regex = /^[A-Za-z\s]+$/;
     let name, last_name, password, password_conf, dni, gender, age, email, user;
@@ -58,9 +48,6 @@ function log_in(){
      * entrada de datos del paciente en el campo de logg in y
      * almacenamiendo valores de prueba de name, last name, user y edad;
      * @method logg_in()
-     * @param {string} password - contraseña
-     * @param {string} email - email
-     * @param {string} user - usuario
      */
     let password, email, user;
     email=document.getElementById("email_login").value;
@@ -84,10 +71,6 @@ function set_patient() {
     /**
      * carga la informacion del paciente al campo user_info;
      * @method set_patient()
-     * @param {string} name - Nombre del paciente
-     * @param {string} last_name - Apellido del paciente
-     * @param {number} age - edad del paciente
-     * @param {string} user - usuario
      */
     let name, last_name, age, user;
     name = localStorage.getItem("name");
@@ -103,21 +86,7 @@ function set_patient() {
 }
 // function draw_canvas() {
 //     /**
-//      * dibuja en el canvas bussy_day los horarios mas concurridos;
-//      * @method draw_canvas()
-//      * @param {string} hours - etiqueta para las horas
-//      * @param {string} canvas - alamacena el elemento
-//      * @param {string} context - almacena el contexto del canvas
-//      * @param {number} data - array de horarios mas concurridos generados aleatoriamente
-//      * @param {number} chartWidth - ancho del canvas
-//      * @param {number} chartHeight - alto del canvas
-//      * @param {number} barWidth - ancho de la barra, dividiendo el ancho del canvas por la cantidad de horas a representar
-//      * @param {number} maxDataValue - calcula el valor maximo de los datos a dibujar para calcular la escala
-//      * @param {number} scale - calcula la escala de las barras
-//      * @param {number} barSpacing - constante para separacion entre barras
-//      * @param {number} x - ancho de la barra
-//      * @param {number} y - alto de la barra
-//      */
+//
 //
 //     const canvas = document.getElementById("busy_days");
 //     const context = canvas.getContext("2d");
@@ -148,6 +117,9 @@ function set_patient() {
 //         context.fillText(hours[i], x, canvas.height -5);
 //     }
 // }
+/** dibuja en el canvas bussy_day los horarios mas concurridos;
+//      * @method draw_canvas()
+//      */
 function draw_canvas() {
     const canvas = document.getElementById("busy_days");
     const context = canvas.getContext("2d");
@@ -196,7 +168,7 @@ function get_date(date){
     /**
      * marca solo una fecha y llama a la funcion draw_canvas();
      * @method get_date()
-     * @param {string} selected_date - flag para saber si ya se selecciono una fecha o no
+     * @param {string} date - flag para saber si ya se selecciono una fecha o no
      */
 
     if(selected_date!==null){
